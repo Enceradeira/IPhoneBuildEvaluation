@@ -9,7 +9,7 @@ class BuildAction
     @scheme = 'HelloWorldApp'
   end
   def execute
-    result = system("xcodebuild #{@build_action} -sdk iphonesimulator -project '#{@project_file}' -scheme '#{@scheme}' -configuration 'Release' OBJROOT='#{@obj_root}' SYMROOT='#{@sym_root}'' CODE_SIGN_IDENTITY='' CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO'")
+    result = system("xcodebuild #{@build_action} -sdk iphonesimulator -project '#{@project_file}' -scheme '#{@scheme}' -configuration 'Release' OBJROOT='#{@obj_root}' SYMROOT='#{@sym_root}' CODE_SIGN_IDENTITY='' CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO")
     unless result
       raise StandardError.new 'build aborted!'
     end
