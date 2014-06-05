@@ -1,5 +1,4 @@
 module AppPaths
-
   def self.project_file
     @project_file ||=File.expand_path 'app/HelloWorldApp.xcodeproj'
   end
@@ -19,5 +18,4 @@ module AppPaths
   def self.scheme
     @scheme ||= 'HelloWorldApp'
   end
-
 end
