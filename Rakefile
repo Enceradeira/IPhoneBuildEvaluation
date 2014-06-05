@@ -34,7 +34,9 @@ end
 desc 'checks appium-server'
 task :check_appium_server do
   unless AppiumServer.is_running?
-    puts "Appium-Server is not running. Start Appium-Server with 'appium'".red.bold
+    message = "Appium-Server is not running. Start Appium-Server with 'appium'"
+    puts message.red.bold
+    raise StandardError.new message
   end
 end
 
