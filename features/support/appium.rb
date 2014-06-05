@@ -1,6 +1,6 @@
 require 'appium_lib'
 
-APP_PATH = 'HelloWorldApp/Build/Products/Release-iphonesimulator/HelloWorldApp.app'
+APP_PATH = 'app/Build/Products/Release-iphonesimulator/HelloWorldApp.app'
 
 # setup driver
 caps = {

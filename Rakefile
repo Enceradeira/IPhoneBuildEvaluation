@@ -9,9 +9,9 @@ end
 class BuildAction
   def initialize(build_action)
     @build_action = build_action
-    @project_file = File.expand_path 'HelloWorldApp/HelloWorldApp.xcodeproj'
-    @obj_root = File.expand_path 'HelloWorldApp/Build/'
-    @sym_root = File.expand_path 'HelloWorldApp/Build/Products/'
+    @project_file = File.expand_path 'app/HelloWorldApp.xcodeproj'
+    @obj_root = File.expand_path 'app/Build/'
+    @sym_root = File.expand_path 'app/Build/Products/'
     @scheme = 'HelloWorldApp'
   end
   def execute
