@@ -1,13 +1,12 @@
 require 'appium_lib'
-
-APP_PATH = 'app/Build/Products/Release-iphonesimulator/HelloWorldApp.app'
+require_relative '../../app_paths'
 
 # setup driver
 caps = {
     caps: {
         platformName: 'iOS',
         versionNumber: '7.1',
-        app: APP_PATH,
+        app: AppPaths.app_path,
     },
     appium_lib: {
         sauce_username: nil, # don't run on Sauce
