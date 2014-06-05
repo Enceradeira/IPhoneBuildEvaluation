@@ -2,6 +2,7 @@ require 'colorize'
 require 'cucumber/rake/task'
 require_relative 'app_paths'
 require_relative 'x_code_build_action'
+require_relative 'appium_server'
 
 Cucumber::Rake::Task.new do |t|
   t.cucumber_opts = %w{--format pretty}
@@ -27,8 +28,16 @@ task :build do
 end
 
 desc 'Run all tests'
-task :test => [:clean, :xc_unit_tests, :cucumber, :notify_build_succeeded] do
+task :test => [:clean, :check_appium_server, :xc_unit_tests, :cucumber, :notify_build_succeeded] do
+end
+
+desc 'checks appium-server'
+task :check_appium_server do
+  unless AppiumServer.is_running?
+    puts "Appium-Server is not running. Start Appium-Server with 'appium'".red.bold
+  end
 end
 
 task :default => [:test] do
 end
+
