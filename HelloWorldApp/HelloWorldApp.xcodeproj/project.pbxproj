@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F57F74C19408FDE00F2B64A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F57F74B19408FDE00F2B64A /* Main.storyboard */; };
 		8F849032193F096100C9BCC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F849031193F096100C9BCC0 /* Foundation.framework */; };
 		8F849034193F096100C9BCC0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F849033193F096100C9BCC0 /* CoreGraphics.framework */; };
 		8F849036193F096100C9BCC0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F849035193F096100C9BCC0 /* UIKit.framework */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8F57F74B19408FDE00F2B64A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8F84902E193F096100C9BCC0 /* HelloWorldApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorldApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F849031193F096100C9BCC0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8F849033193F096100C9BCC0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -111,6 +113,7 @@
 				8F849041193F096100C9BCC0 /* JENAppDelegate.m */,
 				8F849043193F096100C9BCC0 /* Images.xcassets */,
 				8F849038193F096100C9BCC0 /* Supporting Files */,
+				8F57F74B19408FDE00F2B64A /* Main.storyboard */,
 			);
 			path = HelloWorldApp;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F57F74C19408FDE00F2B64A /* Main.storyboard in Resources */,
 				8F84903C193F096100C9BCC0 /* InfoPlist.strings in Resources */,
 				8F849044193F096100C9BCC0 /* Images.xcassets in Resources */,
 			);
@@ -438,6 +442,7 @@
 				8F84905C193F096100C9BCC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8F84905D193F096100C9BCC0 /* Build configuration list for PBXNativeTarget "HelloWorldAppTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +451,7 @@
 				8F84905F193F096100C9BCC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
