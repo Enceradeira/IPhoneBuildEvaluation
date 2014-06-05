@@ -1,3 +1,5 @@
+require 'colorize'
+
 class BuildAction
   def initialize(build_action)
     @build_action = build_action
@@ -6,8 +8,15 @@ class BuildAction
     @sym_root = File.expand_path 'HelloWorldApp/Build/Products/'
   end
   def execute
-    system("xcodebuild #{@build_action} -sdk iphonesimulator -project '#{@project_file}' -scheme 'HelloWorldApp' -configuration 'Release' OBJROOT='#{@obj_root}' SYMROOT='#{@sym_root}'' CODE_SIGN_IDENTITY='' CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO'")
+    result = system("xcodebuild #{@build_action} -sdk iphonesimulator -project '#{@project_file}' -scheme 'HelloWorldApp' -configuration 'Release' OBJROOT='#{@obj_root}' SYMROOT='#{@sym_root}'' CODE_SIGN_IDENTITY='' CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO'")
+    unless result
+      raise StandardError.new 'build aborted!'
+    end
   end
+end
+
+task :notify_build_succeeded do
+  puts '*** BUILD SUCCEEDED ***'.green.bold
 end
 
 task :clean do
@@ -18,5 +27,5 @@ task :test do
   BuildAction.new(:test).execute
 end
 
-task :default => [:clean, :test] do
+task :default => [:clean, :test, :notify_build_succeeded] do
 end
