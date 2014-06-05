@@ -1,4 +1,10 @@
 require 'colorize'
+require 'cucumber/rake/task'
+
+Cucumber::Rake::Task.new do |t|
+  t.cucumber_opts = %w{--format pretty}
+end
+
 
 class BuildAction
   def initialize(build_action)
@@ -20,10 +26,12 @@ task :notify_build_succeeded do
   puts '*** BUILD SUCCEEDED ***'.green.bold
 end
 
+desc 'cleans the build'
 task :clean do
   BuildAction.new(:clean).execute
 end
 
+desc 'tests the build'
 task :test do
   BuildAction.new(:test).execute
 end
