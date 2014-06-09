@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Hello World Controller View Controller-->
         <scene sceneID="Z7j-2e-Fps">
             <objects>
-                <viewController id="XfB-Lm-EB2" sceneMemberID="viewController">
+                <viewController id="XfB-Lm-EB2" customClass="JENHelloWorldControllerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="662-LB-cnH"/>
                         <viewControllerLayoutGuide type="bottom" id="gkV-UA-ydX"/>
@@ -17,11 +17,14 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVB-6B-NJ2">
-                                <rect key="frame" x="83" y="230" width="155" height="30"/>
+                                <rect key="frame" x="68" y="241" width="155" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Click me!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onClickMeClicked:" destination="XfB-Lm-EB2" eventType="touchUpInside" id="V9B-8P-AuL"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
