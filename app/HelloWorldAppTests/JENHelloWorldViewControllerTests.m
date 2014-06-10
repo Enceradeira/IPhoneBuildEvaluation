@@ -7,6 +7,9 @@
 //
 
 #import <XCTest/XCTest.h>
+#define HC_SHORTHAND
+#import <OCHamcrest/OCHamcrest.h>
+
 #import "JENHelloWorldViewController.h"
 
 @interface JENHelloWorldViewControllerTests : XCTestCase
@@ -33,17 +36,18 @@
 
 - (void)testStoryboard_ShouldLoadController
 {
-    XCTAssertNotNil(_controller);
+    assertThat(_controller, is(notNilValue()));
 }
 
 - (void)testController_ShouldHaveView
 {
-    XCTAssertNotNil(_controller);
+    assertThat(_controller.view, is(notNilValue()));
 }
 
 - (void)testController_ShouldDisplayClickButton
 {
     XCTAssertNotNil(_controller.ClickMeButton);
+    assertThat(_controller.ClickMeButton, is(notNilValue()));
 }
 
 - (void) testButtonClick_ShouldDisplayHelloWorldAlert{

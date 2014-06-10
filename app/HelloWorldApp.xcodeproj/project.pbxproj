@@ -23,6 +23,36 @@
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
+		<key>0354062F92F74AB2B08D12DC</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
 		<key>0B387A926A3C451DAA48B421</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -46,6 +76,19 @@
 </string>
 			<key>showEnvVarsInLog</key>
 			<string>0</string>
+		</dict>
+		<key>104519F050A54336A5BD1705</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-HelloWorldAppTests.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
 		<key>7404805881DD4EEFBABFF7CF</key>
 		<dict>
@@ -83,6 +126,7 @@
 				<string>8F849030193F096100C9BCC0</string>
 				<string>8F84902F193F096100C9BCC0</string>
 				<string>CD602EC3C4784C428817D26B</string>
+				<string>B134B6A689E843C2AD7E2FCB</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -261,11 +305,13 @@
 		<dict>
 			<key>children</key>
 			<array>
+				<string>8FC3ABE31946E65E000793ED</string>
 				<string>8F849031193F096100C9BCC0</string>
 				<string>8F849033193F096100C9BCC0</string>
 				<string>8F849035193F096100C9BCC0</string>
 				<string>8F84904A193F096100C9BCC0</string>
 				<string>00A46B62AC404FD7ACFD8C27</string>
+				<string>104519F050A54336A5BD1705</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -512,6 +558,7 @@
 				<string>8F84904B193F096100C9BCC0</string>
 				<string>8F84904D193F096100C9BCC0</string>
 				<string>8F84904C193F096100C9BCC0</string>
+				<string>FF753660D8E446B0B3BB2FC6</string>
 			</array>
 			<key>isa</key>
 			<string>PBXFrameworksBuildPhase</string>
@@ -537,9 +584,11 @@
 			<string>8F84905D193F096100C9BCC0</string>
 			<key>buildPhases</key>
 			<array>
+				<string>0354062F92F74AB2B08D12DC</string>
 				<string>8F849045193F096100C9BCC0</string>
 				<string>8F849046193F096100C9BCC0</string>
 				<string>8F849047193F096100C9BCC0</string>
+				<string>DB2ADF3B88464B9292C164AF</string>
 			</array>
 			<key>buildRules</key>
 			<array/>
@@ -885,6 +934,11 @@
 				<string>HelloWorldApp/HelloWorldApp-Prefix.pch</string>
 				<key>INFOPLIST_FILE</key>
 				<string>HelloWorldApp/HelloWorldApp-Info.plist</string>
+				<key>LIBRARY_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>$(PROJECT_DIR)/Pods/build/Debug-iphoneos</string>
+				</array>
 				<key>PRODUCT_NAME</key>
 				<string>$(TARGET_NAME)</string>
 				<key>PROVISIONING_PROFILE</key>
@@ -917,6 +971,11 @@
 				<string>HelloWorldApp/HelloWorldApp-Prefix.pch</string>
 				<key>INFOPLIST_FILE</key>
 				<string>HelloWorldApp/HelloWorldApp-Info.plist</string>
+				<key>LIBRARY_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>$(PROJECT_DIR)/Pods/build/Debug-iphoneos</string>
+				</array>
 				<key>PRODUCT_NAME</key>
 				<string>$(TARGET_NAME)</string>
 				<key>PROVISIONING_PROFILE</key>
@@ -945,6 +1004,8 @@
 		</dict>
 		<key>8F84905E193F096100C9BCC0</key>
 		<dict>
+			<key>baseConfigurationReference</key>
+			<string>B134B6A689E843C2AD7E2FCB</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>BUNDLE_LOADER</key>
@@ -980,6 +1041,8 @@
 		</dict>
 		<key>8F84905F193F096100C9BCC0</key>
 		<dict>
+			<key>baseConfigurationReference</key>
+			<string>B134B6A689E843C2AD7E2FCB</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>BUNDLE_LOADER</key>
@@ -1061,6 +1124,34 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>8FC3ABE31946E65E000793ED</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>archive.ar</string>
+			<key>name</key>
+			<string>libPods-OCHamcrest.a</string>
+			<key>path</key>
+			<string>Pods/build/Debug-iphoneos/libPods-OCHamcrest.a</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B134B6A689E843C2AD7E2FCB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-HelloWorldAppTests.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Pods-HelloWorldAppTests.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>CD602EC3C4784C428817D26B</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1075,6 +1166,30 @@
 			<string>Pods/Pods.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DB2ADF3B88464B9292C164AF</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Pods-HelloWorldAppTests-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
 		</dict>
 		<key>E9DAB191EA0648BEB1F5298A</key>
 		<dict>
@@ -1105,6 +1220,13 @@ fi
 </string>
 			<key>showEnvVarsInLog</key>
 			<string>0</string>
+		</dict>
+		<key>FF753660D8E446B0B3BB2FC6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>104519F050A54336A5BD1705</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 	</dict>
 	<key>rootObject</key>

@@ -2,4 +2,7 @@
 
 platform :ios, "7.1"
 
-pod 'OCHamcrest', '~> 4.0'
+target :HelloWorldAppTests, :exclusive => true do
+  pod 'OCHamcrest', '~> 4.0'
+end
+
