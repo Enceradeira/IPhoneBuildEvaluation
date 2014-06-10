@@ -2,7 +2,11 @@
 
 platform :ios, "7.1"
 
-target :HelloWorldAppTests, :exclusive => true do
-  pod 'OCHamcrest', '~> 4.0'
+target :HelloWorldApp do
+    pod "Typhoon"
+end
+
+target :HelloWorldAppTests do
+    pod 'OCHamcrest', '~> 4.0'
 end
 
