@@ -12,10 +12,13 @@
 @implementation JENAppAssembly
 - (id)uiAlert
 {
-    return nil;
+    return [TyphoonDefinition withClass:[UIAlertView class] configuration:^(TyphoonDefinition* definition)
+            {
+                definition.scope = TyphoonScopePrototype;
+            }];
 }
 - (id)helloWorldController
 {
-   return [TyphoonDefinition withClass:[JENHelloWorldViewController class]];
+    return [TyphoonDefinition withClass:[JENHelloWorldViewController class]];
 }
 @end

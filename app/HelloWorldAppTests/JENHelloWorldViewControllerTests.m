@@ -9,8 +9,11 @@
 #import <XCTest/XCTest.h>
 #define HC_SHORTHAND
 #import <OCHamcrest/OCHamcrest.h>
+#import <Typhoon.h>
 
 #import "JENHelloWorldViewController.h"
+#import "JENAppAssemblyForTest.h"
+#import "JENUIAlertViewSpy.h"
 
 @interface JENHelloWorldViewControllerTests : XCTestCase
 @end
@@ -18,13 +21,18 @@
 @implementation JENHelloWorldViewControllerTests
 {
     JENHelloWorldViewController* _controller;
+    TyphoonComponentFactory* _factory;
+    
 }
 - (void)setUp
 {
     [super setUp];
     
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    _controller = [storyboard instantiateViewControllerWithIdentifier:@"HelloWorldController"];
+    _factory = [[TyphoonBlockComponentFactory alloc] initWithAssemblies:@[[JENAppAssemblyForTest assembly]]];
+    
+    TyphoonStoryboard *storyboard = [TyphoonStoryboard storyboardWithName:@"Main" factory:_factory bundle:nil];
+    
+     _controller = [storyboard instantiateViewControllerWithIdentifier:@"HelloWorldController"];
     [_controller performSelectorOnMainThread:@selector(loadView) withObject:nil waitUntilDone:YES];
 }
 
@@ -46,12 +54,17 @@
 
 - (void)testController_ShouldDisplayClickButton
 {
-    XCTAssertNotNil(_controller.ClickMeButton);
-    assertThat(_controller.ClickMeButton, is(notNilValue()));
+    assertThat(_controller.clickMeButton, is(notNilValue()));
 }
 
-- (void) testButtonClick_ShouldDisplayHelloWorldAlert{
-     XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+- (void) testButtonClick_ShouldDisplayHelloWorldAlert
+{
+    UIButton* button = _controller.clickMeButton;
+    JENUIAlertViewSpy* alertView = [_factory componentForType:[UIAlertView class]];
+    
+    [button sendActionsForControlEvents:UIControlEventTouchUpInside];
+   
+    assertThatBool(alertView.wasShowCalled, equalToBool(YES));
 }
 
 

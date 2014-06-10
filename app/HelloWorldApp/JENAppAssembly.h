@@ -8,7 +8,10 @@
 
 #import "TyphoonAssembly.h"
 
-@interface JENAppAssembly : TyphoonAssembly
+@protocol JENAppAssembly
 - (id) uiAlert;
 - (id) helloWorldController;
+@end
+
+@interface JENAppAssembly : TyphoonAssembly<JENAppAssembly>
 @end

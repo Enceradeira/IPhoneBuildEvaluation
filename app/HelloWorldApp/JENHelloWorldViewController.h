@@ -11,6 +11,6 @@
 
 @interface JENHelloWorldViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIButton *ClickMeButton;
+@property (weak, nonatomic) IBOutlet UIButton *clickMeButton;
 
 @end

@@ -14,7 +14,7 @@
 
 @implementation JENHelloWorldViewController
 {
-    id _factory;
+    TyphoonComponentFactory* _factory;
 }
 
 - (void)typhoonSetFactory:(TyphoonComponentFactory *)factory
@@ -45,7 +45,8 @@
 
 - (IBAction)onClickMeClicked:(id)sender
 {
-    UIAlertView* view = [[UIAlertView alloc  ]initWithTitle:@"Hello world" message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+    UIAlertView* view = [_factory componentForType:[UIAlertView class]];
+    view = [view initWithTitle:@"Hello world" message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
     [view show];
 }
 
