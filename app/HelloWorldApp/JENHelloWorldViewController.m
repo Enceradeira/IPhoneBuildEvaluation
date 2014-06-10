@@ -13,6 +13,14 @@
 @end
 
 @implementation JENHelloWorldViewController
+{
+    id _factory;
+}
+
+- (void)typhoonSetFactory:(TyphoonComponentFactory *)factory
+{
+    _factory = factory;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

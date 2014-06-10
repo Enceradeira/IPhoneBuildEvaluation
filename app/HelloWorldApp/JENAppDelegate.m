@@ -7,11 +7,21 @@
 //
 
 #import "JENAppDelegate.h"
+#import "JENAppAssembly.h"
+#import "JENHelloWorldViewController.h"
+#import <Typhoon.h>
 
 @implementation JENAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSString *storyboardName = @"Main";
+    TyphoonComponentFactory* factory = [[TyphoonBlockComponentFactory alloc] initWithAssemblies:@[[JENAppAssembly assembly]]];
+    
+    TyphoonStoryboard *storyboard = [TyphoonStoryboard storyboardWithName:storyboardName factory:factory bundle:nil];
+    
+    self.window.rootViewController = [storyboard instantiateInitialViewController];
+    
     return YES;
 }
 

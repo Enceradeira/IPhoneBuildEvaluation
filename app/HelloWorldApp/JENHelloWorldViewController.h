@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Typhoon.h>
 
 @interface JENHelloWorldViewController : UIViewController
+
 @property (weak, nonatomic) IBOutlet UIButton *ClickMeButton;
 
 @end
