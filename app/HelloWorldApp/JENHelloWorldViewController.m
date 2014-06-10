@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 co.uk.jennius. All rights reserved.
 //
 
-#import "JENHelloWorldControllerViewController.h"
+#import "JENHelloWorldViewController.h"
 
-@interface JENHelloWorldControllerViewController ()
+@interface JENHelloWorldViewController ()
 
 @end
 
-@implementation JENHelloWorldControllerViewController
+@implementation JENHelloWorldViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

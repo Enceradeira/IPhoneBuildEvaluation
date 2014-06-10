@@ -20,7 +20,8 @@
 		8F84904D193F096100C9BCC0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F849035193F096100C9BCC0 /* UIKit.framework */; };
 		8F849055193F096100C9BCC0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8F849053193F096100C9BCC0 /* InfoPlist.strings */; };
 		8F849057193F096100C9BCC0 /* HelloWorldAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F849056193F096100C9BCC0 /* HelloWorldAppTests.m */; };
-		8FC3ABE0194635E3000793ED /* JENHelloWorldControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC3ABDF194635E3000793ED /* JENHelloWorldControllerViewController.m */; };
+		8FC3ABE0194635E3000793ED /* JENHelloWorldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC3ABDF194635E3000793ED /* JENHelloWorldViewController.m */; };
+		8FC3ABE219463CC3000793ED /* JENHelloWorldViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC3ABE119463CC3000793ED /* JENHelloWorldViewControllerTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +52,9 @@
 		8F849052193F096100C9BCC0 /* HelloWorldAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HelloWorldAppTests-Info.plist"; sourceTree = "<group>"; };
 		8F849054193F096100C9BCC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8F849056193F096100C9BCC0 /* HelloWorldAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldAppTests.m; sourceTree = "<group>"; };
-		8FC3ABDE194635E3000793ED /* JENHelloWorldControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JENHelloWorldControllerViewController.h; sourceTree = "<group>"; };
-		8FC3ABDF194635E3000793ED /* JENHelloWorldControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JENHelloWorldControllerViewController.m; sourceTree = "<group>"; };
+		8FC3ABDE194635E3000793ED /* JENHelloWorldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JENHelloWorldViewController.h; sourceTree = "<group>"; };
+		8FC3ABDF194635E3000793ED /* JENHelloWorldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JENHelloWorldViewController.m; sourceTree = "<group>"; };
+		8FC3ABE119463CC3000793ED /* JENHelloWorldViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JENHelloWorldViewControllerTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,8 +119,8 @@
 				8F849043193F096100C9BCC0 /* Images.xcassets */,
 				8F849038193F096100C9BCC0 /* Supporting Files */,
 				8F57F74B19408FDE00F2B64A /* Main.storyboard */,
-				8FC3ABDE194635E3000793ED /* JENHelloWorldControllerViewController.h */,
-				8FC3ABDF194635E3000793ED /* JENHelloWorldControllerViewController.m */,
+				8FC3ABDE194635E3000793ED /* JENHelloWorldViewController.h */,
+				8FC3ABDF194635E3000793ED /* JENHelloWorldViewController.m */,
 			);
 			path = HelloWorldApp;
 			sourceTree = "<group>";
@@ -139,6 +141,7 @@
 			children = (
 				8F849056193F096100C9BCC0 /* HelloWorldAppTests.m */,
 				8F849051193F096100C9BCC0 /* Supporting Files */,
+				8FC3ABE119463CC3000793ED /* JENHelloWorldViewControllerTests.m */,
 			);
 			path = HelloWorldAppTests;
 			sourceTree = "<group>";
@@ -254,7 +257,7 @@
 			files = (
 				8F849042193F096100C9BCC0 /* JENAppDelegate.m in Sources */,
 				8F84903E193F096100C9BCC0 /* main.m in Sources */,
-				8FC3ABE0194635E3000793ED /* JENHelloWorldControllerViewController.m in Sources */,
+				8FC3ABE0194635E3000793ED /* JENHelloWorldViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FC3ABE219463CC3000793ED /* JENHelloWorldViewControllerTests.m in Sources */,
 				8F849057193F096100C9BCC0 /* HelloWorldAppTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

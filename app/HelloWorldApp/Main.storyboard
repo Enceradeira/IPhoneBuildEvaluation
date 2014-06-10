@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Hello World Controller View Controller-->
+        <!--Hello World View Controller-->
         <scene sceneID="Z7j-2e-Fps">
             <objects>
-                <viewController id="XfB-Lm-EB2" customClass="JENHelloWorldControllerViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HelloWorldController" id="XfB-Lm-EB2" customClass="JENHelloWorldViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="662-LB-cnH"/>
                         <viewControllerLayoutGuide type="bottom" id="gkV-UA-ydX"/>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVB-6B-NJ2">
-                                <rect key="frame" x="68" y="241" width="155" height="30"/>
+                                <rect key="frame" x="83" y="269" width="155" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Click me!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -26,9 +26,32 @@
                                     <action selector="onClickMeClicked:" destination="XfB-Lm-EB2" eventType="touchUpInside" id="V9B-8P-AuL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9RR-wa-a0h">
+                                <rect key="frame" x="83" y="269" width="155" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Click me!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClickMeClicked:" destination="XfB-Lm-EB2" eventType="touchUpInside" id="QSP-WT-iUg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dfz-my-Ipn">
+                                <rect key="frame" x="83" y="269" width="155" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Click me!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClickMeClicked:" destination="XfB-Lm-EB2" eventType="touchUpInside" id="jjP-AS-F0c"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="ClickMeButton" destination="Dfz-my-Ipn" id="tnI-OL-ezo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5dQ-h9-ABt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

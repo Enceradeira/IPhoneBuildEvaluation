@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JENHelloWorldControllerViewController : UIViewController
+@interface JENHelloWorldViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIButton *ClickMeButton;
 
 @end
