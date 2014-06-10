@@ -12,6 +12,11 @@ task :notify_build_succeeded do
   puts '*** BUILD SUCCEEDED ***'.green.bold
 end
 
+desc 'Opens XCode'
+task :xcode do
+  `open #{AppPaths.workspace_file}`
+end
+
 desc 'Clean the build'
 task :clean do
   XCodeBuildAction.new(:clean).execute

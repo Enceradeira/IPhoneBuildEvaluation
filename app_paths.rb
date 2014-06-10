@@ -1,6 +1,6 @@
 module AppPaths
-  def self.project_file
-    @project_file ||=File.expand_path 'app/HelloWorldApp.xcodeproj'
+  def self.workspace_file
+    @workspace_file ||=File.expand_path 'app/HelloWorldApp.xcworkspace'
   end
 
   def self.app_path
