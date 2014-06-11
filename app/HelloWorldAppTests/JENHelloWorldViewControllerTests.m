@@ -14,6 +14,7 @@
 #import "JENHelloWorldViewController.h"
 #import "JENAppAssemblyForTest.h"
 #import "JENUIAlertViewSpy.h"
+#import "JENTyphoonBuilder.h"
 
 @interface JENHelloWorldViewControllerTests : XCTestCase
 @end
@@ -28,10 +29,9 @@
 {
     [super setUp];
     
-    _factory = [[TyphoonBlockComponentFactory alloc] initWithAssemblies:@[[JENAppAssemblyForTest assembly]]];
-    
-    TyphoonStoryboard *storyboard = [TyphoonStoryboard storyboardWithName:@"Main" factory:_factory bundle:nil];
-    
+    _factory = [JENTyphoonBuilder createFactory:[JENAppAssemblyForTest assembly]];
+    TyphoonStoryboard *storyboard = [JENTyphoonBuilder createStoryboard:_factory];
+   
      _controller = [storyboard instantiateViewControllerWithIdentifier:@"HelloWorldController"];
     [_controller performSelectorOnMainThread:@selector(loadView) withObject:nil waitUntilDone:YES];
 }

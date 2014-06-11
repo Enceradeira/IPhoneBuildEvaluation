@@ -26,6 +26,7 @@
 		8FC3ABE0194635E3000793ED /* JENHelloWorldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC3ABDF194635E3000793ED /* JENHelloWorldViewController.m */; };
 		8FC3ABE219463CC3000793ED /* JENHelloWorldViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC3ABE119463CC3000793ED /* JENHelloWorldViewControllerTests.m */; };
 		8FC3ABEA1947007C000793ED /* JENAppAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC3ABE91947007C000793ED /* JENAppAssembly.m */; };
+		8FD023BB19484B0600A1F8BA /* JENTyphoonBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD023BA19484B0600A1F8BA /* JENTyphoonBuilder.m */; };
 		FF753660D8E446B0B3BB2FC6 /* libPods-HelloWorldAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 104519F050A54336A5BD1705 /* libPods-HelloWorldAppTests.a */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,8 @@
 		8FC3ABE31946E65E000793ED /* libPods-OCHamcrest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-OCHamcrest.a"; path = "Pods/build/Debug-iphoneos/libPods-OCHamcrest.a"; sourceTree = "<group>"; };
 		8FC3ABE81947007C000793ED /* JENAppAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JENAppAssembly.h; sourceTree = "<group>"; };
 		8FC3ABE91947007C000793ED /* JENAppAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JENAppAssembly.m; sourceTree = "<group>"; };
+		8FD023B919484B0600A1F8BA /* JENTyphoonBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JENTyphoonBuilder.h; sourceTree = "<group>"; };
+		8FD023BA19484B0600A1F8BA /* JENTyphoonBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JENTyphoonBuilder.m; sourceTree = "<group>"; };
 		9A5F0D13B824489BAE73FC5B /* libPods-HelloWorldApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HelloWorldApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B134B6A689E843C2AD7E2FCB /* Pods-HelloWorldAppTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWorldAppTests.xcconfig"; path = "Pods/Pods-HelloWorldAppTests.xcconfig"; sourceTree = "<group>"; };
 		CD602EC3C4784C428817D26B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -159,6 +162,8 @@
 				8FC3ABDF194635E3000793ED /* JENHelloWorldViewController.m */,
 				8FC3ABE81947007C000793ED /* JENAppAssembly.h */,
 				8FC3ABE91947007C000793ED /* JENAppAssembly.m */,
+				8FD023B919484B0600A1F8BA /* JENTyphoonBuilder.h */,
+				8FD023BA19484B0600A1F8BA /* JENTyphoonBuilder.m */,
 			);
 			path = HelloWorldApp;
 			sourceTree = "<group>";
@@ -362,6 +367,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FD023BB19484B0600A1F8BA /* JENTyphoonBuilder.m in Sources */,
 				8F849042193F096100C9BCC0 /* JENAppDelegate.m in Sources */,
 				8FC3ABEA1947007C000793ED /* JENAppAssembly.m in Sources */,
 				8F84903E193F096100C9BCC0 /* main.m in Sources */,

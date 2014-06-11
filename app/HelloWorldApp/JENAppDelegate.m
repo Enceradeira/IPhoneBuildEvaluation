@@ -6,19 +6,19 @@
 //  Copyright (c) 2014 co.uk.jennius. All rights reserved.
 //
 
+#import <Typhoon.h>
 #import "JENAppDelegate.h"
 #import "JENAppAssembly.h"
 #import "JENHelloWorldViewController.h"
-#import <Typhoon.h>
+#import "JENTyphoonBuilder.h"
 
 @implementation JENAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    NSString *storyboardName = @"Main";
-    TyphoonComponentFactory* factory = [[TyphoonBlockComponentFactory alloc] initWithAssemblies:@[[JENAppAssembly assembly]]];
-    
-    TyphoonStoryboard *storyboard = [TyphoonStoryboard storyboardWithName:storyboardName factory:factory bundle:nil];
+    TyphoonAssembly* assembly = [JENAppAssembly assembly];
+    TyphoonComponentFactory* factory = [JENTyphoonBuilder createFactory:assembly];
+    TyphoonStoryboard *storyboard = [JENTyphoonBuilder createStoryboard:factory];
     
     self.window.rootViewController = [storyboard instantiateInitialViewController];
     
