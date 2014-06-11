@@ -1,5 +1,5 @@
 require 'appium_lib'
-require_relative '../../app_paths'
+require_relative '../../lib/app_paths'
 
 # setup driver
 caps = {
